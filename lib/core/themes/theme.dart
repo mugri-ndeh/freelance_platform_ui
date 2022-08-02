@@ -72,9 +72,12 @@ ThemeData customLightTheme() {
     // colorScheme: ColorScheme.fromSwatch(primarySwatch: Palette.purple).copyWith(),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
+        textStyle: const TextStyle(fontSize: 18, color: Palette.white),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         elevation: 0,
+        primary: Palette.purple.shade50,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(60),
         ),
       ),
     ),
