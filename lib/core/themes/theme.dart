@@ -61,7 +61,7 @@ ThemeData customLightTheme() {
     iconTheme: lightTheme.iconTheme.copyWith(
       color: Palette.black,
     ),
-    backgroundColor: Palette.white,
+    backgroundColor: Palette.scaffoldBg,
     tabBarTheme: lightTheme.tabBarTheme.copyWith(
       labelColor: Palette.purple,
       unselectedLabelColor: Palette.black,
@@ -90,6 +90,15 @@ ThemeData customLightTheme() {
           borderRadius: BorderRadius.circular(25),
         ),
       ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      elevation: 0,
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: Palette.white,
+      selectedItemColor: Palette.purple,
+      unselectedItemColor: Palette.purple.shade100,
     ),
   );
 }

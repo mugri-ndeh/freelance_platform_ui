@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:freelance_platform_ui/core/themes/palette.dart';
 import 'package:provider/provider.dart';
 
+import '../../../core/helpers.dart';
 import '../../../logic/providers/auth_index_provider.dart';
+import '../base/base_screen.dart';
 import 'components/input.dart';
 
 class SignUp extends StatelessWidget {
@@ -56,7 +58,11 @@ class SignUp extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ElevatedButton(onPressed: () {}, child: const Text('Sign-up')),
+                ElevatedButton(
+                    onPressed: () {
+                      push(context, BaseScreen());
+                    },
+                    child: const Text('Sign-up')),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

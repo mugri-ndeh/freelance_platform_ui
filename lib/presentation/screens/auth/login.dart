@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:freelance_platform_ui/core/helpers.dart';
 import 'package:freelance_platform_ui/core/themes/palette.dart';
 import 'package:freelance_platform_ui/logic/providers/auth_index_provider.dart';
+import 'package:freelance_platform_ui/presentation/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'components/input.dart';
@@ -51,7 +53,11 @@ class Login extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ElevatedButton(onPressed: () {}, child: const Text('Log-in')),
+                ElevatedButton(
+                    onPressed: () {
+                      push(context, BaseScreen());
+                    },
+                    child: const Text('Log-in')),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
