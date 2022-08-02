@@ -15,6 +15,7 @@ class Onboarding extends StatefulWidget {
 class _OnboardingState extends State<Onboarding> {
   final List<Widget> _pages = [
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const TitleOnboard(),
         Center(
@@ -25,6 +26,7 @@ class _OnboardingState extends State<Onboarding> {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const TitleOnboard(),
         Center(
@@ -35,6 +37,7 @@ class _OnboardingState extends State<Onboarding> {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const TitleOnboard(),
         Center(
@@ -46,6 +49,7 @@ class _OnboardingState extends State<Onboarding> {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const TitleOnboard(),
         Center(
@@ -57,6 +61,7 @@ class _OnboardingState extends State<Onboarding> {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const TitleOnboard(),
         Center(
@@ -72,41 +77,41 @@ class _OnboardingState extends State<Onboarding> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Stack(
-        children: [
-          Container(
-            decoration:
-                BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: SvgPicture.asset(
-              "assets/images/bubbles.svg",
-              fit: BoxFit.cover,
+    return Stack(
+      children: [
+        Container(
+          decoration:
+              BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: SvgPicture.asset(
+            "assets/images/bubbles.svg",
+            fit: BoxFit.cover,
+          ),
+        ),
+        IntroductionScreen(
+          isTopSafeArea: true,
+          isBottomSafeArea: true,
+          rawPages: _pages,
+          globalBackgroundColor: Colors.transparent,
+          onDone: () {},
+          onSkip: () {},
+          showSkipButton: false,
+          showDoneButton: false,
+          showNextButton: false,
+          done:
+              const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+          dotsDecorator: const DotsDecorator(
+            size: Size(7.5, 7.5),
+            color: Color(0xFFBDBDBD),
+            activeColor: Palette.purple,
+            // activeSize: Size(22.0, 10.0),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(25.0)),
             ),
           ),
-          IntroductionScreen(
-            rawPages: _pages,
-            globalBackgroundColor: Colors.transparent,
-            onDone: () {},
-            onSkip: () {},
-            showSkipButton: false,
-            showDoneButton: false,
-            showNextButton: false,
-            done: const Text('Done',
-                style: TextStyle(fontWeight: FontWeight.w600)),
-            dotsDecorator: const DotsDecorator(
-              size: Size(7.5, 7.5),
-              color: Color(0xFFBDBDBD),
-              activeColor: Palette.purple,
-              // activeSize: Size(22.0, 10.0),
-              activeShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(25.0)),
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

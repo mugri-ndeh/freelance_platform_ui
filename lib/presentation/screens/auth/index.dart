@@ -14,7 +14,7 @@ class AuthIndex extends StatefulWidget {
 class _AuthIndexState extends State<AuthIndex> {
   @override
   Widget build(BuildContext context) {
-    return Provider(
+    return ChangeNotifierProvider(
       create: (context) => AuthIndexProvider(),
       child: Scaffold(
         backgroundColor: Colors.transparent,

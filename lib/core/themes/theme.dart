@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'palette.dart';
 
 ThemeData customLightTheme() {
-  TextTheme poppins = GoogleFonts.poppinsTextTheme();
+  TextTheme montserrat = GoogleFonts.montserratTextTheme();
   TextTheme _customLightThemesTextTheme(TextTheme base) {
     return base.copyWith(
       headline1: base.headline1?.copyWith(
@@ -49,7 +49,7 @@ ThemeData customLightTheme() {
         )),
     brightness: Brightness.light,
     hintColor: Palette.grey,
-    textTheme: _customLightThemesTextTheme(poppins),
+    textTheme: _customLightThemesTextTheme(montserrat),
     primaryColor: Palette.purple,
     indicatorColor: Palette.purple,
     dividerColor: Palette.grey,
