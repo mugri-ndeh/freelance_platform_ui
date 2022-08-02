@@ -31,18 +31,22 @@ ThemeData customLightTheme() {
       ),
       bodyText1: base.bodyMedium?.copyWith(color: Palette.black, fontSize: 25),
       bodyText2: base.bodyText1?.copyWith(color: Palette.grey, fontSize: 25),
-      bodyMedium: base.bodyMedium?.copyWith(
-          fontSize: 25, color: Palette.black, fontWeight: FontWeight.bold),
-      bodySmall: base.bodySmall?.copyWith(
-          fontSize: 16, color: Palette.black, fontWeight: FontWeight.bold),
-      bodyLarge: base.bodyLarge?.copyWith(
-          fontSize: 39.06, color: Palette.black, fontWeight: FontWeight.bold),
     );
   }
 
   final ThemeData lightTheme = ThemeData.light();
   return lightTheme.copyWith(
-    // appBarTheme: lightTheme.appBarTheme.copyWith(iconTheme: ),
+    appBarTheme: lightTheme.appBarTheme.copyWith(
+        color: Palette.white,
+        elevation: 0,
+        titleSpacing: 0,
+        iconTheme: const IconThemeData(
+          color: Palette.grey,
+        ),
+        titleTextStyle: const TextStyle(
+          color: Palette.grey,
+          fontSize: 18,
+        )),
     brightness: Brightness.light,
     hintColor: Palette.grey,
     textTheme: _customLightThemesTextTheme(poppins),
@@ -65,7 +69,7 @@ ThemeData customLightTheme() {
     buttonTheme:
         lightTheme.buttonTheme.copyWith(buttonColor: Palette.purple.shade50),
     errorColor: Colors.red,
-    colorScheme: ColorScheme.fromSwatch(primarySwatch: Palette.purple),
+    // colorScheme: ColorScheme.fromSwatch(primarySwatch: Palette.purple).copyWith(),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0,
@@ -82,17 +86,6 @@ ThemeData customLightTheme() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),
-      ),
-    ),
-    appBarTheme: const AppBarTheme(
-      iconTheme: IconThemeData(color: Palette.black),
-      color: Palette.white,
-      elevation: 0,
-      titleSpacing: 0,
-      titleTextStyle: TextStyle(
-        color: Palette.black,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
       ),
     ),
   );
