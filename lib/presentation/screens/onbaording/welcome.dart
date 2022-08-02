@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:freelance_platform_ui/core/helpers.dart';
 import 'package:freelance_platform_ui/core/themes/palette.dart';
+import 'package:freelance_platform_ui/presentation/screens/onbaording/onboard.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -43,7 +45,9 @@ class Welcome extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            push(context, Onboarding());
+                          },
                           child: const Text('Discover the platform')),
                       const SizedBox(height: 20),
                       Row(
