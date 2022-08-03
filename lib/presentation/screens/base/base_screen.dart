@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:freelance_platform_ui/logic/providers/bottom_navigation.dart';
 import 'package:freelance_platform_ui/presentation/screens/base/widgets/bottom_nav.dart';
+import 'package:freelance_platform_ui/presentation/screens/home/home_screen.dart';
 import 'package:provider/provider.dart';
 
 class BaseScreen extends StatelessWidget {
   BaseScreen({Key? key}) : super(key: key);
 
   final List<Widget> _pages = [
-    const Center(child: Text('Home')),
+    const HomeScreen(),
     const Center(child: Text('Search')),
     const Center(child: Text('Messages')),
     const Center(child: Text('Profile')),

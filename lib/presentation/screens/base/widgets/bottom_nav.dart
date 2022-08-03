@@ -11,29 +11,38 @@ class BottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<BottomNavigationProvider>(
       builder: (_, nav, __) {
-        return BottomNavigationBar(
-          currentIndex: nav.selectedIndex,
-          onTap: (index) {
-            nav.selectedIndex = index;
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Remix.dashboard_line),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Remix.search_2_line),
-              label: 'Search',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Remix.discuss_line),
-              label: 'Messages',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Remix.user_line),
-              label: 'Profile',
-            ),
-          ],
+        return Container(
+          height: 80,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+            color: Palette.white,
+          ),
+          child: BottomNavigationBar(
+            iconSize: 25,
+            currentIndex: nav.selectedIndex,
+            onTap: (index) {
+              nav.selectedIndex = index;
+            },
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Remix.dashboard_line),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Remix.search_2_line),
+                label: 'Search',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Remix.discuss_line),
+                label: 'Messages',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Remix.user_line),
+                label: 'Profile',
+              ),
+            ],
+          ),
         );
       },
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'palette.dart';
@@ -8,29 +9,31 @@ ThemeData customLightTheme() {
   TextTheme _customLightThemesTextTheme(TextTheme base) {
     return base.copyWith(
       headline1: base.headline1?.copyWith(
-        fontSize: 39.06,
+        fontSize: 39.06.sp,
         color: Palette.black,
         fontWeight: FontWeight.bold,
       ),
       headline2: base.headline2?.copyWith(
-        fontSize: 31.25,
+        fontSize: 31.25.sp,
         color: Palette.black,
         fontWeight: FontWeight.bold,
       ),
-      headline3: base.headline3?.copyWith(fontSize: 25.0, color: Palette.black),
+      headline3:
+          base.headline3?.copyWith(fontSize: 25.0.sp, color: Palette.black),
       headline4: base.headline4?.copyWith(
-          fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.bold),
+          fontSize: 20.0.sp, color: Colors.black, fontWeight: FontWeight.bold),
       headline5: base.headline5?.copyWith(
-        fontSize: 16.0,
+        fontSize: 16.0.sp,
         color: Palette.black,
       ),
       headline6: base.headline6?.copyWith(
-          fontSize: 12.8, color: Palette.black, fontWeight: FontWeight.bold),
+          fontSize: 12.8.sp, color: Palette.black, fontWeight: FontWeight.bold),
       caption: base.caption?.copyWith(
         color: Palette.grey,
       ),
-      bodyText1: base.bodyMedium?.copyWith(color: Palette.black, fontSize: 25),
-      bodyText2: base.bodyText1?.copyWith(color: Palette.grey, fontSize: 25),
+      bodyText1:
+          base.bodyMedium?.copyWith(color: Palette.black, fontSize: 25.sp),
+      bodyText2: base.bodyText1?.copyWith(color: Palette.grey, fontSize: 25.sp),
     );
   }
 
@@ -59,7 +62,7 @@ ThemeData customLightTheme() {
       size: 25,
     ),
     iconTheme: lightTheme.iconTheme.copyWith(
-      color: Palette.black,
+      color: Palette.grey,
     ),
     backgroundColor: Palette.scaffoldBg,
     tabBarTheme: lightTheme.tabBarTheme.copyWith(
@@ -96,7 +99,7 @@ ThemeData customLightTheme() {
       showUnselectedLabels: false,
       elevation: 0,
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Palette.white,
+      backgroundColor: Colors.transparent,
       selectedItemColor: Palette.purple,
       unselectedItemColor: Palette.purple.shade100,
     ),
