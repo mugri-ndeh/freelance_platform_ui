@@ -15,8 +15,10 @@ class TopAppBar extends StatelessWidget {
         SizedBox(height: 25.h),
         Text(title, style: Theme.of(context).textTheme.headline1),
         SizedBox(height: 5.h),
-        Text(subtitle, style: Theme.of(context).textTheme.headline3),
-        SizedBox(height: 5.h),
+        subtitle.isEmpty
+            ? SizedBox.shrink()
+            : Text(subtitle, style: Theme.of(context).textTheme.headline3),
+        subtitle.isEmpty ? SizedBox.shrink() : SizedBox(height: 5.h),
       ],
     );
   }
