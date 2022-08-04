@@ -18,8 +18,8 @@ ThemeData customLightTheme() {
         color: Palette.black,
         fontWeight: FontWeight.bold,
       ),
-      headline3:
-          base.headline3?.copyWith(fontSize: 25.0.sp, color: Palette.black),
+      headline3: base.headline3?.copyWith(
+          fontSize: 25.0.sp, color: Palette.black, fontWeight: FontWeight.bold),
       headline4: base.headline4?.copyWith(
           fontSize: 20.0.sp, color: Colors.black, fontWeight: FontWeight.bold),
       headline5: base.headline5?.copyWith(
@@ -32,8 +32,8 @@ ThemeData customLightTheme() {
         color: Palette.grey,
       ),
       bodyText1:
-          base.bodyMedium?.copyWith(color: Palette.black, fontSize: 25.sp),
-      bodyText2: base.bodyText1?.copyWith(color: Palette.grey, fontSize: 25.sp),
+          base.bodyMedium?.copyWith(color: Palette.black, fontSize: 16.sp),
+      bodyText2: base.bodyText1?.copyWith(color: Palette.grey, fontSize: 16.sp),
     );
   }
 
