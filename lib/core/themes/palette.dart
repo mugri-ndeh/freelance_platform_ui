@@ -6,7 +6,7 @@ class Palette {
     <int, Color>{
       50: Color(0XFF9279FE), //10%
       100: Color(0XFFCABDFD), //20%
-      200: Color(0XFFCABDFD), //20%
+      200: Color(0XFFFBEEFF), //20%
     },
   );
   //==========DARK THEME COLORS==========//
