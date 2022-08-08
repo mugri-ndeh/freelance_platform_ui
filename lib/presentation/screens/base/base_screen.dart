@@ -6,6 +6,8 @@ import 'package:freelance_platform_ui/presentation/screens/messages/messages_scr
 import 'package:freelance_platform_ui/presentation/screens/search/search_screen.dart';
 import 'package:provider/provider.dart';
 
+import '../profile/profile_screen.dart';
+
 class BaseScreen extends StatelessWidget {
   BaseScreen({Key? key}) : super(key: key);
 
@@ -13,7 +15,7 @@ class BaseScreen extends StatelessWidget {
     const HomeScreen(),
     const SearchScreen(),
     MessagesScreen(),
-    const Center(child: Text('Profile')),
+    const ProfileScreen(),
   ];
 
   @override
