@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:freelance_platform_ui/core/helpers.dart';
 import 'package:freelance_platform_ui/core/themes/palette.dart';
 import 'package:freelance_platform_ui/presentation/screens/onbaording/onboard.dart';
+import 'package:go_router/go_router.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -46,7 +47,8 @@ class Welcome extends StatelessWidget {
                     children: [
                       ElevatedButton(
                           onPressed: () {
-                            push(context, Onboarding());
+                            // push(context, Onboarding());
+                            context.go('/onboarding');
                           },
                           child: const Text('Discover the platform')),
                       const SizedBox(height: 20),

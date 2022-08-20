@@ -4,6 +4,8 @@ import 'package:freelance_platform_ui/core/themes/theme.dart';
 import 'package:freelance_platform_ui/presentation/screens/onbaording/welcome.dart';
 import 'package:provider/provider.dart';
 
+import 'presentation/router/app_router.dart';
+
 void main() {
   Provider.debugCheckInvalidValueType = null;
   runApp(const MyApp());
@@ -18,11 +20,20 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) => MaterialApp(
+      builder: (context, child) =>
+          // MaterialApp(
+          //   debugShowCheckedModeBanner: false,
+          //   title: 'Flutter Demo',
+          //   theme: customLightTheme(),
+          //   home: Welcome(),
+          // ),
+          MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: customLightTheme(),
-        home: Welcome(),
+        routeInformationParser: router.routeInformationParser,
+        routerDelegate: router.routerDelegate,
+        routeInformationProvider: router.routeInformationProvider,
       ),
     );
   }
